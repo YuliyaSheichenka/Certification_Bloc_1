@@ -71,4 +71,6 @@ file XXXX
 
 ## References
 
-- [Web Scraping Booking.Com](https://www.scrapingbee.com/blog/web-scraping-booking/) (Article with examples of code for scraping some types of data from booking.com pages)  
+- [Web Scraping Booking.Com](https://www.scrapingbee.com/blog/web-scraping-booking/) (Article with examples of code for scraping some types of data from booking.com pages)
+
+- [Hide API keys in Python scripts using python-dotenv, .env, and .gitignore](https://www.youtube.com/watch?v=YdgIWTYQ69A/)
