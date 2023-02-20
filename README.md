@@ -39,34 +39,43 @@ The different files of the project correspond to the steps that were accomplishe
 
     file:  1_city_coordinates.ipynb
     
-    The notebook creates the table city_coordinates.csv in the working directory.
+    The notebook creates the table city_coordinates.csv in the working directory and saves it to S3 bucket.
 
 2. Getting weather forecast data for cities from list using API of https://openweathermap.org
 
     file: 2_weather_data.ipynb
-    The notebook creates the file weather_forecast.csv in the working directory.
+    The notebook creates the file weather_forecast.csv in the working directory and saves it to S3 bucket.
 
 
 3. Scraping information on hotels from booking.com
-    - Scraping Booking's search page to get hotel URLs
+    - Scraping Booking's search page to get hotel URLs and saving the resulting .json file to S3 bucket.
 
-         file: 3a_booking_scraping_hotel_urls.py
-    - Scraping hotel pages to get hotel name, coordinates, score given by users, text description.
+         files: 
+
+         3a_booking_scraping_hotel_urls.py, 
+         3a_saving_hotel_urls_to_s3.ipynb
+
+    - Scraping hotel pages to get hotel name, coordinates, score given by users, text description and saving the resulting .json file to S3 bucket.
     
-        file:  3b_booking_scraping_hotels_data.py
+        files:  
+        
+        3b_booking_scraping_hotels_data.py,
+        3b_saving_hotels_data_to_s3.ipynb
 
-4. Creating a unique table with enriched information for hotels in each city
+4. Creating a unique table with enriched information for hotels in each city and saving it so S3 bucket
+        file: 4_kayak_df.ipynb
+
+5. Creating an SQL Database using AWS RDS
+        file: 5_creating_sql_database_in_rds.ipynb
+
+6. Creating maps with top-5 cities in terms of weather and top-20 hotels in each of these cities
 file XXXX
 
-5. Creating a datalake using S3
-file XXXX
+## Keys and credentials
 
-6. Creating an SQL Database using AWS RDS
-file XXXX
+API key for openweathermap.org as well as AWS credentials are confidential and are stored in an .env file as environment variables.
 
-7. Creating maps with top-5 cities in terms of weather and top-20 hotels in each of these cities
-file XXXX
-
+The files in S3 bucket are public for reading.
 
 
 ## References
@@ -74,3 +83,5 @@ file XXXX
 - [Web Scraping Booking.Com](https://www.scrapingbee.com/blog/web-scraping-booking/) (Article with examples of code for scraping some types of data from booking.com pages)
 
 - [Hide API keys in Python scripts using python-dotenv, .env, and .gitignore](https://www.youtube.com/watch?v=YdgIWTYQ69A/)
+
+- [How to read a JSON response from a link in Python?](https://www.geeksforgeeks.org/how-to-read-a-json-response-from-a-link-in-python/)

@@ -56,7 +56,7 @@ url_list = []
 for i in range(0, len(adapted_city_list)):
     url = "https://www.booking.com/searchresults.en-us.html?ss=city&ssne=city&ssne_untouched=city&order=distance_from_search"
     # &order=distance_from_search: the hotels in the search results will be sorted by distance from the city center
-    # (closest cities first)
+    # (closest hotels first)
     new_url = url.replace("city", adapted_city_list[i])
     url_list.append(new_url)
 
