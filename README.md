@@ -29,7 +29,7 @@ The information should be combined in a single table containing enriched informa
 
 Based on this data, two maps should be delivered :
 - Top-5 destinations,
-- Top-20 hotels for each of these destinations.
+- Top-20 hotels in these destinations.
 
 
 ## Project files
@@ -69,7 +69,7 @@ The different files of the project correspond to the steps that were accomplishe
         file: 5_creating_sql_database_in_rds.ipynb
 
 6. Creating maps with top-5 cities in terms of weather and top-20 hotels in each of these cities
-file XXXX
+        file: 6_maps.ipynb
 
 ## Keys and credentials
 
@@ -85,3 +85,5 @@ The files in S3 bucket are public for reading.
 - [Hide API keys in Python scripts using python-dotenv, .env, and .gitignore](https://www.youtube.com/watch?v=YdgIWTYQ69A/)
 
 - [How to read a JSON response from a link in Python?](https://www.geeksforgeeks.org/how-to-read-a-json-response-from-a-link-in-python/)
+
+- [Connecting to a relational database using SQLAlchemy and Python](https://dev.to/chrisgreening/connecting-to-a-relational-database-using-sqlalchemy-and-python-1619/)
