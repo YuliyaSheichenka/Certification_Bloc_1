@@ -45,6 +45,7 @@ city_list.sort()
 
 print(city_list)
 
+# Replacing spaces in city names with "+" so that the names could be inserted in the urls used to search for hotels
 adapted_city_list = []
 for i in range(0, len(city_list)):
     new_city_name = city_list[i].replace(" ", "+")
@@ -52,6 +53,7 @@ for i in range(0, len(city_list)):
 
 print(adapted_city_list)
 
+# Creating a list of urls that will be used by the spider by replacing "city" by city name
 url_list = []
 for i in range(0, len(adapted_city_list)):
     url = "https://www.booking.com/searchresults.en-us.html?ss=city&ssne=city&ssne_untouched=city&order=distance_from_search"
@@ -67,7 +69,6 @@ print(len(url_list))
 class booking_spider(scrapy.Spider):
     # Naming the spider
     name = "booking"
-
 
     # Urls for the spider to start from 
     start_urls = url_list

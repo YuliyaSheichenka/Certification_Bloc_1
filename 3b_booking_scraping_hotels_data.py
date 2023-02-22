@@ -6,11 +6,8 @@ from scrapy.crawler import CrawlerProcess
 import json
 from urllib.request import urlopen
 
-#with open('C:\\Study\\Jedha\\Fullstack\\dmc_19_10_2022\\kayak_project\\result\\booking24_search_page.json') as hotels:
-   #hotels = json.load(hotels)
-
+# Loading previously created .json file with hotel urls
 url = "https://kayak-booking-bucket-12-12-2022.s3.eu-west-3.amazonaws.com/booking_search_page.json"
-
 response = urlopen(url)
 hotels = json.loads(response.read())
 
@@ -32,9 +29,9 @@ class booking_spider(scrapy.Spider):
                 "hotel_name": response.xpath('.//*[@class="d2fee87262 pp-header__title"]/text()').get(),
                 "score": response.xpath('.//*[@class="b5cd09854e d10a6220b4"]/text()').get(),
                 "description": ' '.join((response.xpath('.//*[@id="property_description_content"]/p/text()').getall())),
-                "location": response.xpath('.//*[@id="showMap2"]/span[1]/text()').get(""),
                 # Description of a hotel is separated in several phrases, each of phrases enclosed in a tag <p></p>
-                # I'm using the 'join()' method to join the different phrases of the description into a single string.
+                # 'join()' method is used to join the different phrases of the description into a single string.
+                "location": response.xpath('.//*[@id="showMap2"]/span[1]/text()').get(""),
                 "latitide": (response.xpath('.//*[@id="hotel_sidebar_static_map"]/@data-atlas-latlng').get()).split(',')[0],
                 "longtitude": (response.xpath('.//*[@id="hotel_sidebar_static_map"]/@data-atlas-latlng').get()).split(',')[1],
                 "hotel_url": response
@@ -44,8 +41,8 @@ class booking_spider(scrapy.Spider):
 
 filename = "booking_hotels_data.json"
 
-# If file already exists, delete it before crawling (because Scrapy will 
-# concatenate the last and new results otherwise)
+# If file already exists, delete it before crawling  
+# (because Scrapy will concatenate the last and new results otherwise)
 if filename in os.listdir('result/'): 
         os.remove('result/' + filename)
 
