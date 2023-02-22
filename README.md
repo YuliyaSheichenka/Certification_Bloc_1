@@ -51,13 +51,13 @@ The different files of the project correspond to the steps that were accomplishe
 3. Scraping information on hotels from booking.com
 
 
-Scraping Booking's search page to get hotel URLs and saving the resulting .json file to S3 bucket
+- Scraping Booking's search page to get hotel URLs and saving the resulting .json file to S3 bucket
 
         3a_booking_scraping_hotel_urls.py 
         3a_saving_hotel_urls_to_s3.ipynb
 
 
-Scraping hotel pages to get hotel name, coordinates, score given by users, text description and saving the resulting .json file to S3 bucket.
+- Scraping hotel pages to get hotel name, coordinates, score given by users, text description and saving the resulting .json file to S3 bucket.
 
         3b_booking_scraping_hotels_data.py
         3b_saving_hotels_data_to_s3.ipynb
