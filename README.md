@@ -2,6 +2,14 @@
 
 ![Kayak](https://seekvectorlogo.com/wp-content/uploads/2018/01/kayak-vector-logo.png)
 
+## Video presentation
+
+[Bloc 1: Kayak project - Video presentation](https://share.vidyard.com/watch/iTYA4BWoJLsFmoJvWGqRen?)
+
+## Contact
+
+You can write me at **sheichenkojuly@gmail.com**
+
 ## Context 
 
 <a href="https://www.kayak.com" target="_blank">Kayak</a> is a travel search engine that helps user plan their next trip at the best price.
