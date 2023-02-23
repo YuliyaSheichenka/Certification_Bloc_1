@@ -80,13 +80,9 @@ class booking_spider(scrapy.Spider):
         for property_card in property_cards: 
             url = property_card.xpath('.//h3/a[@data-testid="title-link"]/@href').get().split("?")[0]
             url_dict = {
-                #"hotel_name": response.xpath('.//h3/a[@data-testid="title-link"]/div/text()').get(),
                 "hotel_name": property_card.xpath('.//h3/a[@data-testid="title-link"]/div/text()').get(),
                 "hotel_url" : url,
                 "booking_city_url": response
-                #"city": city
-                #"score": response.xpath('.//div[@data-testid="review-score"]/div/text()').get(""),
-                #"location": response.xpath('.//span[@data-testid="address"]/text()').get("")
                     }
             try:
                 yield url_dict
