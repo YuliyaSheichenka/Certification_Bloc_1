@@ -89,6 +89,8 @@ The files in S3 bucket are public for reading.
 
 - [Hide API keys in Python scripts using python-dotenv, .env, and .gitignore](https://www.youtube.com/watch?v=YdgIWTYQ69A/)
 
+- [gitignore.io](https://www.toptal.com/developers/gitignore/) (Templates for creating .gitignore files)
+
 - [How to read a JSON response from a link in Python?](https://www.geeksforgeeks.org/how-to-read-a-json-response-from-a-link-in-python/)
 
 - [Connecting to a relational database using SQLAlchemy and Python](https://dev.to/chrisgreening/connecting-to-a-relational-database-using-sqlalchemy-and-python-1619/)
